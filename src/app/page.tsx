@@ -1,4 +1,4 @@
-// app/home/page.tsx
+// app/page.tsx
 import AboutSection from '@/components/AboutSection';
 import HeroSection from '../components/HeroSection';
 import PackageList from '../components/PackageList';

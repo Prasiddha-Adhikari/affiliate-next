@@ -34,12 +34,11 @@ interface DashboardData {
   affiliates: Affiliate[];
   withdrawalRequests: WithdrawalRequest[];
   upcomingTrainings: Training[];
-  // Add more fields as needed, e.g. earnings, leaderboard, etc.
 }
 
 interface DashboardContextType {
   data: DashboardData;
-  // You can add setters or update methods here later
+  // Add setters or methods here later if needed
 }
 
 const initialData: DashboardData = {
@@ -103,8 +102,6 @@ const DashboardContext = createContext<DashboardContextType | undefined>(undefin
 
 export function DashboardProvider({ children }: { children: ReactNode }) {
   const [data, setData] = useState<DashboardData>(initialData);
-
-  // You can add functions here to update data later
 
   return (
     <DashboardContext.Provider value={{ data }}>
